@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import request, render_template
+import gemini.py
+import weatherapi.py
 
 app = Flask(__name__)
 
