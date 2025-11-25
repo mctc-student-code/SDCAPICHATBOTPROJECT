@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request, render_template
-# import gemini
-# import holidayapi
+import gemini
+import holidayapi
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def get_best_times():
     
     try: 
         # Asks Gemini to extract countries and date range from user input
-        countries, date = gemini.extract_meeting_data(user_input)
+        countries, date = gemini.personalized_meeting_planner(user_input)
         # Calls Holiday API module to get data for the extracted countries and date range
         results = holidayapi(countries, date)
 
