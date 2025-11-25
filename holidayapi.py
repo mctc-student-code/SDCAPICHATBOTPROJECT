@@ -17,7 +17,7 @@ country = input("Enter country code (e.g., US): ")
 while True:
     try:
         year = int(input("Enter year : "))
-        if 0 < year < 3000:  # Month must be between 1 and 12
+        if 0 < year < 3000:  # Year must be positive, random high number picked
                 break
         else:
             print("Year must be positive.")
